@@ -71,42 +71,9 @@
                         <rect key="frame" x="0.0" y="0.0" width="600" height="600"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-9y-48p">
-                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
-                                <items>
-                                    <navigationItem id="0RR-ce-0HB">
-                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="jVc-zC-ZpG">
-                                            <connections>
-                                                <action selector="shareMeme:" destination="Haq-Ms-ld6" id="LG6-oj-jcJ"/>
-                                            </connections>
-                                        </barButtonItem>
-                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="dZA-LG-4Mk">
-                                            <connections>
-                                                <action selector="cancelEditing:" destination="Haq-Ms-ld6" id="I1Y-Xg-e8o"/>
-                                            </connections>
-                                        </barButtonItem>
-                                    </navigationItem>
-                                </items>
-                            </navigationBar>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleToFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-tC-o3T">
-                                <rect key="frame" x="16" y="64" width="568" height="448"/>
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="xDa-tC-o3T">
+                                <rect key="frame" x="-4" y="64" width="608" height="448"/>
                             </imageView>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-Eb-zwz">
-                                <rect key="frame" x="50" y="114" width="508" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="Nkt-Qq-OlE"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
-                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-bS-em2">
-                                <rect key="frame" x="50" y="432" width="508" height="30"/>
-                                <constraints>
-                                    <constraint firstAttribute="height" constant="30" id="qp2-Yd-gdO"/>
-                                </constraints>
-                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                <textInputTraits key="textInputTraits"/>
-                            </textField>
                             <toolbar opaque="NO" clearsContextBeforeDrawing="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Lvv-CV-dHf">
                                 <rect key="frame" x="0.0" y="512" width="600" height="44"/>
                                 <items>
@@ -125,6 +92,39 @@
                                     <barButtonItem style="plain" systemItem="flexibleSpace" id="YjL-OQ-A4v"/>
                                 </items>
                             </toolbar>
+                            <navigationBar contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="n4I-9y-48p">
+                                <rect key="frame" x="0.0" y="20" width="600" height="44"/>
+                                <items>
+                                    <navigationItem id="0RR-ce-0HB">
+                                        <barButtonItem key="leftBarButtonItem" systemItem="action" id="jVc-zC-ZpG">
+                                            <connections>
+                                                <action selector="shareMeme:" destination="Haq-Ms-ld6" id="LG6-oj-jcJ"/>
+                                            </connections>
+                                        </barButtonItem>
+                                        <barButtonItem key="rightBarButtonItem" systemItem="cancel" id="dZA-LG-4Mk">
+                                            <connections>
+                                                <action selector="cancelEditing:" destination="Haq-Ms-ld6" id="I1Y-Xg-e8o"/>
+                                            </connections>
+                                        </barButtonItem>
+                                    </navigationItem>
+                                </items>
+                            </navigationBar>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="TOP" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="sSs-Eb-zwz">
+                                <rect key="frame" x="50" y="114" width="508" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="Nkt-Qq-OlE"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
+                            <textField opaque="NO" clipsSubviews="YES" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" text="BOTTOM" textAlignment="center" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ZqU-bS-em2">
+                                <rect key="frame" x="50" y="432" width="508" height="30"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="30" id="qp2-Yd-gdO"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                <textInputTraits key="textInputTraits"/>
+                            </textField>
                         </subviews>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <constraints>
@@ -132,7 +132,7 @@
                             <constraint firstItem="sSs-Eb-zwz" firstAttribute="top" secondItem="n4I-9y-48p" secondAttribute="bottom" constant="50" id="5bJ-kq-LEF"/>
                             <constraint firstItem="n4I-9y-48p" firstAttribute="top" secondItem="LmV-lL-L6K" secondAttribute="bottom" id="Chu-h0-2QO"/>
                             <constraint firstItem="sSs-Eb-zwz" firstAttribute="trailing" secondItem="ZqU-bS-em2" secondAttribute="trailing" id="HcC-Dg-pKq"/>
-                            <constraint firstItem="xDa-tC-o3T" firstAttribute="leading" secondItem="3dd-Ji-gAA" secondAttribute="leadingMargin" id="Jpf-Kd-YY9"/>
+                            <constraint firstItem="xDa-tC-o3T" firstAttribute="leading" secondItem="3dd-Ji-gAA" secondAttribute="leadingMargin" constant="-20" id="Jpf-Kd-YY9"/>
                             <constraint firstItem="n4I-9y-48p" firstAttribute="leading" secondItem="Lvv-CV-dHf" secondAttribute="leading" id="PQg-fp-58H"/>
                             <constraint firstItem="n4I-9y-48p" firstAttribute="bottom" secondItem="xDa-tC-o3T" secondAttribute="top" id="UvX-Ts-LCV"/>
                             <constraint firstItem="Lvv-CV-dHf" firstAttribute="top" secondItem="ZqU-bS-em2" secondAttribute="bottom" constant="50" id="Vla-lj-KXW"/>
