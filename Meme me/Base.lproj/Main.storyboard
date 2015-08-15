@@ -33,11 +33,38 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <color key="backgroundColor" white="1" alpha="1" colorSpace="calibratedWhite"/>
                         <prototypes>
-                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="memeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" id="lPz-82-JCN">
+                            <tableViewCell contentMode="scaleToFill" restorationIdentifier="memeCell" selectionStyle="default" indentationWidth="10" reuseIdentifier="memeCell" id="lPz-82-JCN" customClass="CustomRow" customModule="Meme_me" customModuleProvider="target">
                                 <autoresizingMask key="autoresizingMask"/>
                                 <tableViewCellContentView key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" restorationIdentifier="MemeCell" tableViewCell="lPz-82-JCN" id="asI-hF-qo7">
                                     <autoresizingMask key="autoresizingMask"/>
+                                    <subviews>
+                                        <imageView userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" translatesAutoresizingMaskIntoConstraints="NO" id="TOp-Qb-uyv">
+                                            <rect key="frame" x="8" y="0.0" width="97" height="44"/>
+                                            <color key="backgroundColor" red="0.0" green="0.0" blue="0.0" alpha="1" colorSpace="calibratedRGB"/>
+                                            <constraints>
+                                                <constraint firstAttribute="width" constant="97" id="Uyg-OA-GZR"/>
+                                            </constraints>
+                                        </imageView>
+                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Label" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="hvg-9W-yUs">
+                                            <rect key="frame" x="550" y="11" width="42" height="21"/>
+                                            <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                            <color key="textColor" cocoaTouchSystemColor="darkTextColor"/>
+                                            <nil key="highlightedColor"/>
+                                        </label>
+                                    </subviews>
+                                    <constraints>
+                                        <constraint firstAttribute="bottomMargin" secondItem="TOp-Qb-uyv" secondAttribute="bottom" constant="-8" id="6AB-EY-Yqo"/>
+                                        <constraint firstItem="TOp-Qb-uyv" firstAttribute="top" secondItem="asI-hF-qo7" secondAttribute="topMargin" constant="-8" id="AhZ-bq-bI6"/>
+                                        <constraint firstItem="hvg-9W-yUs" firstAttribute="top" secondItem="asI-hF-qo7" secondAttribute="topMargin" constant="3" id="KXG-7G-Vt8"/>
+                                        <constraint firstItem="hvg-9W-yUs" firstAttribute="trailing" secondItem="asI-hF-qo7" secondAttribute="trailingMargin" id="g6X-x2-0hH"/>
+                                        <constraint firstAttribute="bottomMargin" secondItem="hvg-9W-yUs" secondAttribute="bottom" constant="4" id="pAl-AJ-GKA"/>
+                                        <constraint firstItem="TOp-Qb-uyv" firstAttribute="leading" secondItem="asI-hF-qo7" secondAttribute="leadingMargin" id="uua-bU-78m"/>
+                                    </constraints>
                                 </tableViewCellContentView>
+                                <connections>
+                                    <outlet property="memeImage" destination="TOp-Qb-uyv" id="WMF-MO-mkp"/>
+                                    <outlet property="memeText" destination="hvg-9W-yUs" id="phH-1o-4A7"/>
+                                </connections>
                             </tableViewCell>
                         </prototypes>
                         <connections>
@@ -286,6 +313,6 @@
         <image name="table" width="30" height="30"/>
     </resources>
     <inferredMetricsTieBreakers>
-        <segue reference="48Q-jk-mkb"/>
+        <segue reference="qgJ-Ml-mwv"/>
     </inferredMetricsTieBreakers>
 </document>

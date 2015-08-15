@@ -22,14 +22,13 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     
     override func tableView(tableView: UITableView, cellForRowAtIndexPath indexPath: NSIndexPath) -> UITableViewCell {
         
-        let cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! UITableViewCell
+        let cell = tableView.dequeueReusableCellWithIdentifier("memeCell") as! CustomRow
         let source = (UIApplication.sharedApplication().delegate as! AppDelegate).memes
         let meme = source[indexPath.row]
         
         // Set the name and image
-        cell.textLabel?.text = meme.top
-        cell.imageView?.image = meme.memedImage
-        cell.imageView?.contentMode = UIViewContentMode.ScaleToFill
+        cell.memeImage.image = meme.memedImage
+        cell.memeText.text = meme.top
         
         // If the cell has a detail label, we will put the evil scheme in.
         if let detailTextLabel = cell.detailTextLabel {

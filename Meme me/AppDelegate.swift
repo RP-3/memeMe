@@ -20,11 +20,17 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
                 bottom: "...we have cookies",
                 originalImage: UIImage(named: "darkSide")!,
                 memedImage: UIImage(named: "darkSide")!)
+    
+    let yooda = Meme(top: "To use this app...",
+        bottom: "...tap + you must",
+        originalImage: UIImage(named: "yoda")!,
+        memedImage: UIImage(named: "yoda")!)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
         self.memes.append(m)
+        self.memes.append(yooda)
         return true
     }
 

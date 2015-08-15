@@ -10,6 +10,7 @@
 		B205AAE51B7CE2C1002512A5 /* CustomCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205AAE41B7CE2C1002512A5 /* CustomCell.swift */; };
 		B205AAE71B7CF5D3002512A5 /* MemeDetailViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B205AAE61B7CF5D3002512A5 /* MemeDetailViewController.swift */; };
 		B245F0AA1B7103C70055619A /* Meme.swift in Sources */ = {isa = PBXBuildFile; fileRef = B245F0A91B7103C70055619A /* Meme.swift */; };
+		B2782A001B7FEC6600009864 /* CustomRow.swift in Sources */ = {isa = PBXBuildFile; fileRef = B27829FF1B7FEC6600009864 /* CustomRow.swift */; };
 		B2DEC7E31B6EA883007CA53E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DEC7E21B6EA883007CA53E /* AppDelegate.swift */; };
 		B2DEC7E51B6EA883007CA53E /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = B2DEC7E41B6EA883007CA53E /* ViewController.swift */; };
 		B2DEC7E81B6EA883007CA53E /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = B2DEC7E61B6EA883007CA53E /* Main.storyboard */; };
@@ -35,6 +36,7 @@
 		B205AAE41B7CE2C1002512A5 /* CustomCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomCell.swift; sourceTree = "<group>"; };
 		B205AAE61B7CF5D3002512A5 /* MemeDetailViewController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MemeDetailViewController.swift; sourceTree = "<group>"; };
 		B245F0A91B7103C70055619A /* Meme.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Meme.swift; sourceTree = "<group>"; };
+		B27829FF1B7FEC6600009864 /* CustomRow.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CustomRow.swift; sourceTree = "<group>"; };
 		B2DEC7DD1B6EA883007CA53E /* Meme me.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Meme me.app"; sourceTree = BUILT_PRODUCTS_DIR; };
 		B2DEC7E11B6EA883007CA53E /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		B2DEC7E21B6EA883007CA53E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -101,6 +103,7 @@
 				B2DEC7EB1B6EA883007CA53E /* LaunchScreen.xib */,
 				B2DEC7E01B6EA883007CA53E /* Supporting Files */,
 				B205AAE41B7CE2C1002512A5 /* CustomCell.swift */,
+				B27829FF1B7FEC6600009864 /* CustomRow.swift */,
 			);
 			path = "Meme me";
 			sourceTree = "<group>";
@@ -238,6 +241,7 @@
 				B205AAE51B7CE2C1002512A5 /* CustomCell.swift in Sources */,
 				B2DEC8051B6EB0E7007CA53E /* MemeTableViewController.swift in Sources */,
 				B205AAE71B7CF5D3002512A5 /* MemeDetailViewController.swift in Sources */,
+				B2782A001B7FEC6600009864 /* CustomRow.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
