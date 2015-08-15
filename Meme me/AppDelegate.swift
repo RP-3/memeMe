@@ -12,10 +12,19 @@ import UIKit
 class AppDelegate: UIResponder, UIApplicationDelegate {
 
     var window: UIWindow?
+    
+    //initialize a shared data source with some default memes
+    let darkSide = UIImage(named: "darkSide") //default meme 1
+    var memes = [Meme]()
+    let m = Meme(top: "Come to the dark side...",
+                bottom: "...we have cookies",
+                originalImage: UIImage(named: "darkSide")!,
+                memedImage: UIImage(named: "darkSide")!)
 
 
     func application(application: UIApplication, didFinishLaunchingWithOptions launchOptions: [NSObject: AnyObject]?) -> Bool {
         // Override point for customization after application launch.
+        self.memes.append(m)
         return true
     }
 
