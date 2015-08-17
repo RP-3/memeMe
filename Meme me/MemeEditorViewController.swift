@@ -25,7 +25,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
         
-        self.subscribeToKeyboardNotifications()
+        subscribeToKeyboardNotifications()
         
         //selectively show camera button
         cameraButton.enabled = UIImagePickerController.isSourceTypeAvailable(UIImagePickerControllerSourceType.Camera)
@@ -51,7 +51,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     override func viewWillDisappear(animated: Bool) {
         super.viewWillDisappear(animated)
-        self.unsubscribeFromKeyboardNotifications()
+        unsubscribeFromKeyboardNotifications()
     }
     
     override func prefersStatusBarHidden() -> Bool {
@@ -59,7 +59,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     }
     
     @IBAction func cancelEditing(sender: AnyObject) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*EDITING LABEL TEXTS*/
@@ -93,13 +93,13 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     
     func keyboardWillShow(notification: NSNotification) {
         if bottomText.isFirstResponder() {
-            self.view.frame.origin.y -= getKeyboardHeight(notification)
+            view.frame.origin.y -= getKeyboardHeight(notification)
         }
     }
     
     func keyboardWillHide(notification: NSNotification){
         if bottomText.isFirstResponder() {
-            self.view.frame.origin.y += getKeyboardHeight(notification)            
+            view.frame.origin.y += getKeyboardHeight(notification)
         }
     }
     
@@ -109,21 +109,21 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.PhotoLibrary //for existing images
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
     }
     
     func imagePickerControllerDidCancel(picker: UIImagePickerController) {
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     func imagePickerController(picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [NSObject : AnyObject]) {
         if let image = info["UIImagePickerControllerOriginalImage"] as? UIImage {
-            self.imagePickerView.contentMode = UIViewContentMode.ScaleAspectFill
-            self.imagePickerView.image = image
+            imagePickerView.contentMode = UIViewContentMode.ScaleAspectFill
+            imagePickerView.image = image
         }
         //TODO: set contentMode (See UIView Content Modes) to force retain original aspect ratio
         //or have labels shift to always sit within image
-        self.dismissViewControllerAnimated(true, completion: nil)
+        dismissViewControllerAnimated(true, completion: nil)
     }
     
     /*TAKING A NEW IMAGE*/
@@ -131,7 +131,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         let pickerController = UIImagePickerController()
         pickerController.delegate = self
         pickerController.sourceType = UIImagePickerControllerSourceType.Camera //for new images
-        self.presentViewController(pickerController, animated: true, completion: nil)
+        presentViewController(pickerController, animated: true, completion: nil)
     }
     
     /*GENERATE AND SAVE NEW MEME FROM IMAGE AND TEXT*/
@@ -142,7 +142,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
         
         //capture screenshot
         UIGraphicsBeginImageContext(imagePickerView.frame.size)
-        self.view.drawViewHierarchyInRect(self.view.frame, afterScreenUpdates: true)
+        view.drawViewHierarchyInRect(view.frame, afterScreenUpdates: true)
         let memedImage : UIImage = UIGraphicsGetImageFromCurrentImageContext()
         UIGraphicsEndImageContext()
         
@@ -161,7 +161,7 @@ class MemeEditorViewController: UIViewController, UINavigationControllerDelegate
     @IBAction func shareMeme(sender: AnyObject) {
         let myMeme:Meme = generateMeme()
         var avc = UIActivityViewController(activityItems: [myMeme.memedImage], applicationActivities: nil)
-        self.presentViewController(avc, animated: true, completion: nil)
+        presentViewController(avc, animated: true, completion: nil)
     }
     
 }
