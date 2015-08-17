@@ -13,7 +13,7 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
     
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.collectionView?.reloadData()
+        collectionView?.reloadData()
     }
     
     override func collectionView(collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
@@ -35,9 +35,9 @@ class MemeCollectionViewController: UICollectionViewController, UICollectionView
     
     override func collectionView(collectionView: UICollectionView, didSelectItemAtIndexPath indexPath:NSIndexPath){
         
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         vc.meme = (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row]
-        self.navigationController!.pushViewController(vc, animated: true)
+        navigationController!.pushViewController(vc, animated: true)
         
     }
     

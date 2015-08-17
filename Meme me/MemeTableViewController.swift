@@ -12,7 +12,7 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
 
     override func viewWillAppear(animated: Bool) {
         super.viewWillAppear(animated)
-        self.tableView.reloadData()
+        tableView.reloadData()
 
     }
     
@@ -40,9 +40,9 @@ class MemeTableViewController: UITableViewController, UITableViewDataSource, UIT
     
     override func tableView(tableView: UITableView, didSelectRowAtIndexPath indexPath: NSIndexPath) {
         
-        let vc = self.storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
+        let vc = storyboard!.instantiateViewControllerWithIdentifier("MemeDetailViewController") as! MemeDetailViewController
         vc.meme = (UIApplication.sharedApplication().delegate as! AppDelegate).memes[indexPath.row]
-        self.navigationController!.pushViewController(vc, animated: true)
+        navigationController!.pushViewController(vc, animated: true)
         
     }
     
